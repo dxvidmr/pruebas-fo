@@ -11,9 +11,7 @@ $logo: url("{{ '/assets/logo.png' | absolute_url }}");
 /* text */
 
 $body-font:       'Open Sans', 'sans-serif';
-$heading-font:    'Mitr', 'Open Sans', 'sans-serif';
-$menu-font:       'Open Sans', 'sans-serif';
-
+$heading-font:    'NyghtSerif', 'Mitr', 'Open Sans', 'sans-serif';
 
 /* Image Size */
 
@@ -24,13 +22,14 @@ $thumbnail-width: 140px;
 
 $text-color:      #100c01;
 $bg-color:        #ffffff;
-$neutral:         #D8DCD0;
-$accent-light:    #7D8869;
-$accent-dark:     #3E4435;
+$neutral:         #EBEBEB;
+$accent-light:    #98A781;
+$accent-dark:     #727E62;
+$gray-light:      #F7F7F7;
 
 /* viewport sizes */
 
-$max-width:       800px;
+$max-width:       1200px; /*originalmente 800px*/
 
 /* margins */
 
@@ -51,3 +50,22 @@ font & asset import
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&font-display=auto');
 @import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&family=Urbanist:wght@100&display=swap');
 @import 'wax';
+
+// Variables para las rutas de las fuentes
+$font-path: '../assets/fonts';
+
+// Definir cada variante de la fuente
+@mixin font-face($font-name, $file-name, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $font-name;
+    src: url('#{$font-path}/#{$file-name}.woff2') format('woff2');
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+// Incluir el mixin para cada fuente
+@include font-face('NyghtSerif', 'NyghtSerif-Light', 300);
+@include font-face('NyghtSerif', 'NyghtSerif-Regular', 400, normal);
+@include font-face('NyghtSerif', 'NyghtSerif-Medium', 500);
+@include font-face('NyghtSerif', 'NyghtSerif-Bold', 700, bold);

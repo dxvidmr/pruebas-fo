@@ -18,14 +18,14 @@ html, body {
 }
 
 a {
-  color: $accent-light;
+  color: $accent-dark;
   font-weight: normal;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
-  color: $accent-dark;
+  color: $accent-light;
 }
 
 p {
@@ -33,7 +33,7 @@ p {
   max-width: 100%;
   margin-bottom: $less-margin;
   letter-spacing: .02rem;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1rem;
   line-height: 1.75rem;
   -webkit-font-smoothing: antialiased;
@@ -48,17 +48,18 @@ header & nav bar
 
 #wax-header {
   background-color: $neutral;
-  border-bottom: 1px solid $accent-light;
+  border-bottom: 0px solid $accent-light;
   
   color: $text-color;
   z-index: 100000;
   padding: $margin;
   letter-spacing: 0.075rem;
+  font-family: $heading-font; /*antes estaba arriba, afectando a todo el header*/
+
 
   .navbar-brand {
-    font-family: $heading-font; /*antes estaba arriba, afectando a todo el header*/
     font-weight: 700;
-    color: $accent-light;
+    color: $accent-dark;
     font-size: 2rem;
     white-space: normal;
   }
@@ -68,7 +69,7 @@ header & nav bar
   }
 
   .navbar-brand:hover {
-    color: $accent-dark;
+    color: $accent-light;
   }
 
   .navbar-toggler {
@@ -81,23 +82,23 @@ header & nav bar
       background-color: $neutral;
     }
     .nav-link {
-      color: $text-color;
+      color: $accent-dark;
     }
     .nav-link:hover {
-      color: $accent-dark;
+      color: $accent-light;
     }
     .nav-link:active {
       background-color: $neutral;
     }
     .dropdown-menu {
       background-color: $neutral;
-      border-color: $accent-light;
+      border-color: $neutral;
       .dropdown-item:focus {
         background-color: $neutral;
       }
       .dropdown-item:hover {
         background-color: $neutral;
-        color: $accent-dark;
+        color: $accent-light;
       }
     }
   }
@@ -224,7 +225,7 @@ content section
     min-width: 250px;
   }
   .footer-title {
-    font-weight: bold;
+    font-weight: 500;
     font-family: $heading-font;
     padding-bottom: 1em;
     margin: 0;
@@ -248,7 +249,7 @@ content section
     line-height: 1.2;
   }
   #footer-contact-title {
-    font-weight: bold;
+    font-weight: 500;
     font-family: $heading-font;
     margin: 0;
   }
@@ -341,14 +342,14 @@ content section
     background-color: $neutral;
     padding: $less-margin 0;
     a {
-      color: $accent-light;
+      color: $accent-dark;
       font-weight: 700;
       text-decoration: none;
     }
 
     a:hover {
       text-decoration: underline;
-      color: $accent-dark;
+      color: $accent-light;
     }
   }
 }
@@ -404,7 +405,7 @@ item pages (iiif + metadata)
       background-color: $bg-color;
       margin: 0;
       &:hover{
-        color: $accent-dark !important;
+        color: $accent-light !important;
       }
     }
   }
