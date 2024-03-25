@@ -95,14 +95,14 @@ search:
 # submenu via `sub`.
 
 menu:
+  - label: 'Info'
+    link: '/info'
   - label: 'Aprende'
     sub:
-      - label: 'Sobre el proyecto'
-        link: '/proyecto/'
       - label: 'Sobre Fuente Ovejuna'
         link: '/Exhibiciones/'
-      - label: 'Créditos'
-        link: '/creditos/'
+      - label: 'Bibliografía'
+        link: '/bibliografia'
   - label: 'Edición'
     link: '/ediciondigital'
   - label: 'Archivo'
@@ -125,8 +125,4 @@ footer:
       link: 'https://github.com/dxvidmr/pruebas-fo'
     - label: 'Créditos'
       link: '/credits'
-  logos:
-    - img: '/img/prolopesin.png'
-      link: 'https://prolope.uab.cat/'
-
 # FIN

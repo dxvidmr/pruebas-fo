@@ -10,7 +10,7 @@ $logo: url("{{ '/assets/logo.png' | absolute_url }}");
 
 /* text */
 
-$body-font:       'Open Sans', 'sans-serif';
+$body-font:       'Noto Sans KR', 'Open Sans', 'sans-serif';
 $heading-font:    'NyghtSerif', 'Mitr', 'Open Sans', 'sans-serif';
 
 /* Image Size */
@@ -49,6 +49,7 @@ font & asset import
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&font-display=auto');
 @import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&family=Urbanist:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 @import 'wax';
 
 // Variables para las rutas de las fuentes
@@ -69,3 +70,4 @@ $font-path: '../assets/fonts';
 @include font-face('NyghtSerif', 'NyghtSerif-Regular', 400, normal);
 @include font-face('NyghtSerif', 'NyghtSerif-Medium', 500);
 @include font-face('NyghtSerif', 'NyghtSerif-Bold', 700, bold);
+@include font-face('NyghtSerif', 'NyghtSerif-Dark', 900);
