@@ -10,8 +10,8 @@ $logo: url("{{ '/assets/logo.png' | absolute_url }}");
 
 /* text */
 
-$body-font:       'Noto Sans KR', 'Open Sans', 'sans-serif';
-$heading-font:    'NyghtSerif', 'Mitr', 'Open Sans', 'sans-serif';
+$body-font:       'Nunito Sans', 'Open Sans', 'sans-serif';
+$heading-font:    'Nunito Sans', 'Open Sans', 'sans-serif';
 
 /* Image Size */
 
@@ -26,6 +26,12 @@ $neutral:         #EBEBEB;
 $accent-light:    #98A781;
 $accent-dark:     #727E62;
 $gray-light:      #F7F7F7;
+
+$text: #040316;
+$background: #fbfbfe;
+$primary: #52664d;
+$secondary: #bbc9b0;
+$light-secondary: #f2f5f0;
 
 /* viewport sizes */
 
@@ -48,26 +54,5 @@ font & asset import
 */
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&font-display=auto');
-@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&family=Urbanist:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 @import 'wax';
-
-// Variables para las rutas de las fuentes
-$font-path: '../assets/fonts';
-
-// Definir cada variante de la fuente
-@mixin font-face($font-name, $file-name, $weight: normal, $style: normal) {
-  @font-face {
-    font-family: $font-name;
-    src: url('#{$font-path}/#{$file-name}.woff2') format('woff2');
-    font-weight: $weight;
-    font-style: $style;
-  }
-}
-
-// Incluir el mixin para cada fuente
-@include font-face('NyghtSerif', 'NyghtSerif-Light', 300);
-@include font-face('NyghtSerif', 'NyghtSerif-Regular', 400, normal);
-@include font-face('NyghtSerif', 'NyghtSerif-Medium', 500);
-@include font-face('NyghtSerif', 'NyghtSerif-Bold', 700, bold);
-@include font-face('NyghtSerif', 'NyghtSerif-Dark', 900);
