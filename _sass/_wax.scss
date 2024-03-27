@@ -18,13 +18,13 @@ html, body {
 }
 
 a {
-  color: $accent-dark;
+  color: $primary;
   font-weight: normal;
   position: relative;
   text-decoration: none;
 
   &:hover {
-    color: $accent-dark;
+    color: $primary;
     text-decoration: none;
   }
 
@@ -34,7 +34,7 @@ a {
     width: 100%;
     height: 2px;
     border-radius: 4px;
-    background-color: $accent-light;
+    background-color: $secondary;
     bottom: 0;
     left: 0;
     transform-origin: right;
@@ -48,7 +48,8 @@ a {
   }
 }
 
-// Anular estilo enlaces para el header y las imágenes
+
+// Anular estilo enlaces
 #wax-header a {
   &::before {
     content: none;
@@ -60,6 +61,15 @@ a {
 
 a.image-link::before {
   content: none;
+}
+
+a.button-link {
+  &::before {
+    content: none;
+  }
+  &:hover::before {
+    content: none;
+  }
 }
 
 
@@ -81,19 +91,26 @@ header & nav bar
 
 */
 
+.menu-container {
+  background-color: $light-secondary; 
+  border: 1px solid $light-secondary; 
+  border-radius: 20px;
+  padding: 1rem;
+  margin: 1rem auto; /* Centra el contenedor y aplica márgenes superior e inferior */
+  max-width: calc(100% - 2rem); /* Resta los márgenes de los lados del ancho total */
+  box-sizing: border-box; /* Incluye el padding y el borde dentro del ancho total */
+}
+
 #wax-header {
-  background-color: $neutral;
-  border-bottom: 0px solid $accent-light;
   
-  color: $accent-dark;
+  color: $primary;
   z-index: 100000;
   padding: $margin;
-  letter-spacing: 0.075rem;
   font-family: $heading-font;
 
   .navbar-brand {
     font-weight: 700;
-    color: $accent-dark;
+    color: $primary;
     font-size: 2rem;
     white-space: normal;
   }
@@ -103,39 +120,41 @@ header & nav bar
   }
 
   .navbar-brand:hover {
-    color: $accent-light;
+    color: $secondary;
   }
 
   .navbar-toggler {
-    background-color: $neutral;
+    background-color: $light-secondary;
   }
 
   .navbar-nav {
     .nav-item {
       z-index: 1000000;
-      background-color: $neutral;
+      background-color: $light-secondary;
     }
     .nav-link {
-      color: $accent-dark;
+      color: $primary;
+      font-weight: 700;
     }
     .nav-link:hover {
-      color: $accent-light;
+      color: $secondary;
     }
     .nav-link:active {
-      background-color: $neutral;
+      background-color: $light-secondary;
     }
     .dropdown-menu {
-      background-color: $gray-light;
-      border-color: $neutral;
+      background-color: darken($light-secondary, 2%);
+      border-color: $light-secondary;
       .dropdown-item {
-        color: $accent-dark;
+        color: $primary;
+        font-weight: 500;
       }
       .dropdown-item:focus {
-        background-color: $neutral;
+        background-color: $light-secondary;
       }
       .dropdown-item:hover {
-        background-color: $neutral;
-        color: $accent-light;
+        background-color: darken($light-secondary, 2%);
+        color: $secondary;
       }
     }
   }
@@ -157,7 +176,6 @@ content section
     margin-bottom: $less-margin;
     margin-top: $more-margin;
     font-family: $heading-font;
-    letter-spacing: 0.1rem;
   }
 
   h1 {
@@ -167,13 +185,11 @@ content section
 
   h2 {
     font-size: 2rem;
-    letter-spacing: 0.1rem;
   }
 
   h3 {
     font-size: 1.5rem;
     font-weight: 700;
-    letter-spacing: 0.077rem;
   }
 
   h4 {
@@ -183,7 +199,6 @@ content section
 
   h5 {
     font-size: 1rem;
-    letter-spacing: 0.15rem;
   }
 
   img {
@@ -227,7 +242,7 @@ content section
     }
 
     .inline-image-reference {
-      background-color: $neutral;
+      background-color: $light-secondary;
       margin-top: $more-margin;
       margin-bottom: $more-margin;
       display: inline-block;
@@ -245,11 +260,41 @@ content section
   }
 }
 
+#portada {
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: $primary;
+  }
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+}
+
+.button-container {
+  position: relative;
+  top: 80px;
+}
+
+
+.footer-container {
+  background-color: $light-secondary; /* Asegúrate de que esta variable esté definida o usa un color directo */
+  border: 1px solid $light-secondary; /* Ídem */
+  border-radius: 20px;
+  padding: 1rem;
+  margin: 1rem auto; /* Centra el contenedor y aplica márgenes superior e inferior */
+  max-width: calc(100% - 2rem); /* Resta los márgenes de los lados del ancho total */
+  box-sizing: border-box; /* Incluye el padding y el borde dentro del ancho total */
+}
+
+
+
 #wax-footer {
   width: 100vw;
   padding-bottom: 5rem;
   padding-top: 3rem;
-  background-color: $neutral;
+  background-color: $light-secondary;
   display: flex;
   justify-content: left; 
   align-items: left; 
@@ -269,10 +314,10 @@ content section
     margin: 0;
   }
   .color1 {
-    color: $accent-light;
+    color: $secondary;
   }
   .color2 {
-    color: $accent-dark;
+    color: $primary;
   }
   .footer-description {
     font-family: $body-font;
@@ -365,7 +410,7 @@ content section
 .wax-parallax {
 
   .parallax-image {
-    background-color: $neutral;
+    background-color: $light-secondary;
     width: 100vw;
     height: $parallax-height;
     max-height: 55vh;
@@ -376,17 +421,17 @@ content section
   .parallax-caption {
     margin: 0 auto;
     width: 100vw;
-    background-color: $neutral;
+    background-color: $light-secondary;
     padding: $less-margin 0;
     a {
-      color: $accent-dark;
+      color: $primary;
       font-weight: 700;
       text-decoration: none;
     }
 
     a:hover {
       text-decoration: underline;
-      color: $accent-light;
+      color: $secondary;
     }
   }
 }
@@ -409,9 +454,9 @@ item pages (iiif + metadata)
     text-align: center;
     height:   $viewer-height;
     max-height: 80vh;
-    background-color: $neutral;
+    background-color: $light-secondary;
     width:    100%;
-    border:   1px solid $neutral;
+    border:   1px solid $light-secondary;
     margin:   $more-margin 0 $more-margin 0;
 
     a {
@@ -442,7 +487,7 @@ item pages (iiif + metadata)
       background-color: $bg-color;
       margin: 0;
       &:hover{
-        color: $accent-light !important;
+        color: $secondary !important;
       }
     }
   }
@@ -459,7 +504,7 @@ item pages (iiif + metadata)
   font-family: $body-font;
   font-weight: 300;
   max-width: 100%;
-  border: $neutral 1px solid;
+  border: $light-secondary 1px solid;
   border-radius: 3px;
   padding: $less-margin;
 }
@@ -479,7 +524,7 @@ search box
     margin-bottom: $more-margin;
     &:focus {
         box-shadow: none ;
-        border-color: $neutral;
+        border-color: $light-secondary;
     }
   }
   #results {
@@ -501,12 +546,12 @@ search box
           margin: 0 !important;
           padding: 0;
           .title{
-            color: $accent-light;
+            color: $secondary;
           }
         }
       }
       &:hover {
-        background-color: $neutral
+        background-color: $light-secondary
       }
     }
   }
@@ -616,7 +661,7 @@ search box
           overflow: hidden;
           top: 0;
           left: 0;
-          background-color: $accent-light;
+          background-color: $secondary;
           opacity: 0;
           -webkit-transition:opacity 0.5s ease-in-out;
           transition: opacity 0.5s ease-in-out;
@@ -640,3 +685,50 @@ search box
   width: 80px;
   height: 80px;
 }
+
+
+/* BUTTONS */
+
+button {
+  display: inline-flex; /* Cambiado a inline-flex para permitir expansión */
+  padding: 1.1rem 2.5rem; /* Ajusta el padding para centrar el texto inicialmente */
+  border-radius: 99rem;
+  color: $light-secondary;
+  background-color: $primary;
+  align-items: center;
+  justify-content: center; /* Centra el contenido del botón */
+  gap: 1em;
+  border: none;
+  font-size: 18px;
+  position: relative; /* Importante para el posicionamiento absoluto del icono */
+  overflow: hidden;
+  transition: padding 0.5s ease; /* Suaviza la transición del padding */
+}
+
+.button-text {
+  transition: transform 0.5s ease; /* Transición para mover el texto */
+}
+
+.icon {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transform: translateX(100%); /* Empieza fuera de la vista */
+  opacity: 0;
+  position: absolute; /* Posiciona el icono de manera absoluta */
+  right: 1.1rem; /* Alinea el icono a la derecha dentro del botón */
+}
+
+.icon svg path {
+  fill: $light-secondary;
+}
+
+
+button:hover .button-text {
+  transform: translateX(-20%); /* Mueve el texto hacia la izquierda */
+}
+
+button:hover .icon {
+  transform: translateX(0%); /* Mueve el icono hacia su posición visible */
+  opacity: 1;
+}
+
+
