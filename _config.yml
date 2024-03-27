@@ -17,7 +17,7 @@
 # Feel free to change these! For more info, refer to:
 # ~> https://jekyllrb.com/docs/configuration/options/
 
-title:            'Fuente Ovejuna Social'
+title:            'Todos a una'
 description:      'Edición y archivo colaborativo. Sitio web en pruebas'
 url:              'https://dxvidmr.github.io'
 baseurl:          '/pruebas-fo'
@@ -111,18 +111,12 @@ menu:
     link: '/participa/'
   - label: 'Descargas'
     link: '/descargas/'
-  - label: '🔍︎'
-    link: '/buscar/'
 
 # --------------------------------------------------------------
 # SITE FOOTER SETTINGS
 # --------------------------------------------------------------
 #
 
-footer:
-  links:
-    - label: 'GitHub'
-      link: 'https://github.com/dxvidmr/pruebas-fo'
-    - label: 'Créditos'
-      link: '/credits'
+# Eliminado por no usarse
+
 # FIN
