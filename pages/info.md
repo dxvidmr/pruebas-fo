@@ -4,6 +4,7 @@ title: El proyecto
 permalink: /info/
 ---
 
+En construcción...
 
 Este sitio web será el resultado de la investigación doctoral de [David Merino Recalde](https://dxvidmr.github.io).
 

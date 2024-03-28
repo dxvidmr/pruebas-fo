@@ -6,6 +6,8 @@ permalink: /archivo/
 
 {% include search_box.html search='main' %}
 
+En construcción...
+
 ## Navega por etiquetas
 {% include collection_gallery.html facet_by='_tags' collection='fuenteovejuna' %}
 

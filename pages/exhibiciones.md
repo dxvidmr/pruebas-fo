@@ -4,6 +4,8 @@ permalink: /exhibiciones/
 title: Exhibiciones
 ---
 
+En construcción...
+
 {% assign exhibits = site.exhibits | where: 'layout','exhibit' %}
 <ul>
   {% for exhibit in exhibits %}

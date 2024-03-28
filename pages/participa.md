@@ -4,6 +4,8 @@ title: Participa en el Archivo Social de <i>Fuente Ovejuna</i>
 permalink: /participa/
 ---
 
+Este sitio está en construcción. Si envías ahora tu participación es posible que no pueda tomarse en cuenta. Contacta con [david.merino@uab.cat](mailto:david.merino@uab.cat) si te interesa participar y estar al corriente del proyecto.
+
 Todas tus aportaciones, ya sean experiencias o documentos, se incluirán en el Archivo Social que estamos construyendo. 
 
 <div>

@@ -100,7 +100,7 @@ menu:
   - label: 'Aprende'
     sub:
       - label: 'Sobre Fuente Ovejuna'
-        link: '/Exhibiciones/'
+        link: '/exhibiciones/'
       - label: 'Bibliografía'
         link: '/bibliografia'
   - label: 'Edición'
