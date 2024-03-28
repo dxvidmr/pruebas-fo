@@ -109,6 +109,7 @@ header & nav bar
   font-family: $heading-font;
 
   .navbar-brand {
+    font-family: $logo-font;
     font-weight: 700;
     color: $primary;
     font-size: 2rem;
@@ -261,21 +262,48 @@ content section
 }
 
 #portada {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  align-items: flex-start; 
+  min-height: 80vh; 
+  padding-top: 10vh; 
+  padding-bottom: 10vh; 
+  text-align: left; 
+  
+  .texto-container {
+    margin-top: 2vh; 
+  }
+
   h1 {
+    font-family: $logo-font;
     font-size: 4rem;
     font-weight: 700;
     color: $primary;
+    margin: 0;
+    padding: 0;
+  }
+  h2 {
+    font-family: $logo-font;
+    font-size: 3rem;
+    font-weight: 700;
+    color: $primary;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 5px; 
   }
   h3 {
     font-size: 1.5rem;
     font-weight: 400;
   }
+  .button-container {
+    margin-top: 2vh; 
+    display: flex;
+    justify-content: left;
+    width: 100%;
+  }
 }
 
-.button-container {
-  position: relative;
-  top: 80px;
-}
 
 
 .footer-container {
@@ -308,16 +336,11 @@ content section
     min-width: 250px;
   }
   .footer-title {
+    color: $primary;
     font-weight: 500;
-    font-family: $heading-font;
+    font-family: $logo-font;
     padding-bottom: 1em;
     margin: 0;
-  }
-  .color1 {
-    color: $secondary;
-  }
-  .color2 {
-    color: $primary;
   }
   .footer-description {
     font-family: $body-font;
@@ -717,10 +740,10 @@ button {
   right: 1.1rem; /* Alinea el icono a la derecha dentro del botón */
 }
 
-.icon svg path {
-  fill: $light-secondary;
+.icon img {
+  width: 1.5em;
+  height: auto;
 }
-
 
 button:hover .button-text {
   transform: translateX(-20%); /* Mueve el texto hacia la izquierda */

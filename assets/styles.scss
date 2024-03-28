@@ -12,6 +12,7 @@ $logo: url("{{ '/assets/logo.png' | absolute_url }}");
 
 $body-font:       'Nunito Sans', 'Open Sans', 'sans-serif';
 $heading-font:    'Nunito Sans', 'Open Sans', 'sans-serif';
+$logo-font:       'Yatra One', 'Nunito Sans', 'Open Sans', 'sans-serif';
 
 /* Image Size */
 
@@ -55,4 +56,5 @@ font & asset import
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&font-display=auto');
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
 @import 'wax';
