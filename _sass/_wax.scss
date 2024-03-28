@@ -74,7 +74,7 @@ a.button-link {
 
 
 p {
-  color: $text-color;
+  color: $text;
   max-width: 100%;
   margin-bottom: $less-margin;
   letter-spacing: .02rem;
@@ -136,8 +136,8 @@ header & nav bar
     white-space: normal;
   }
   .navbar-brand img {
-    width: 150px; /* O el ancho que prefieras */
-    height: auto; /* Esto mantendrá las proporciones del logo */
+    width: 150px; 
+    height: auto;
   }
 
   .navbar-brand:hover {
@@ -232,7 +232,7 @@ content section
 
   li {
     font-family: $body-font;
-    color: $text-color;
+    color: $text;
     font-size: 1rem;
     font-weight: 300;
     line-height: 2rem;
@@ -283,50 +283,125 @@ content section
 
 #portada {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap; 
   justify-content: space-between; 
-  align-items: flex-start; 
-  min-height: 80vh; 
-  padding-top: 10vh; 
-  padding-bottom: 10vh; 
-  text-align: left; 
+  align-items: stretch;
+  min-height: 80vh;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  text-align: left;
   width: 100%;
 
-  
-  .texto-container {
-    margin-top: 2vh; 
+  .col { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1; 
+    min-width: 300px; 
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .texto-container,
+  .impreso-inicio {
     width: 100%;
   }
 
   h1 {
-    font-family: $logo-font;
+    font-family: $heading-font;
     font-size: 4rem;
     font-weight: 700;
     color: $primary;
     margin: 0;
     padding: 0;
   }
-  h2 {
-    font-family: $logo-font;
-    font-size: 3rem;
-    font-weight: 700;
-    color: $primary;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 5px; 
-  }
   h3 {
     font-size: 1.5rem;
     font-weight: 400;
   }
   .button-container {
-    margin-top: 2vh; 
     display: flex;
     justify-content: left;
     width: 100%;
+    margin-top: 50px;
+  }
+
+  .impreso-inicio {
+    position: relative; // Necesario para posicionar el pseudo-elemento de forma absoluta
+    display: inline-block; // Asegura que el contenedor se ajuste al tamaño del contenido
+  
+    a {
+      display: inline-block;
+      text-decoration: none; // Elimina el subrayado por defecto de los enlaces
+      color: inherit; // Hereda el color del texto del padre o especifica uno
+  
+      img {
+        width: 70%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius: 15px;
+        transition: transform 0.3s ease; // Efecto suave para el movimiento
+      }
+  
+      &:hover img {
+        transform: translateY(-5px); // Mueve la imagen hacia arriba
+      }
+  
+      &:hover:after {
+        content: "Lee Fuenteovejuna"; // Muestra este mensaje como si fuera un botón
+        position: absolute;
+        left: 50%;
+        top: 100%; // Posiciona justo debajo de la imagen
+        transform: translateX(-50%); // Centra el pseudo-elemento
+        width: auto; // Ajusta al contenido o especifica un ancho
+        padding: 10px 15px; // Espaciado interno para dar forma al botón
+        background-color: $primary; // Color de fondo del botón
+        color: $background; // Color del texto del botón
+        text-align: center;
+        border-radius: 99rem; // Bordes redondeados
+        white-space: nowrap; // Asegura que el texto esté en una sola línea
+        opacity: 0; // Comienza invisible
+        transition: opacity 0.3s ease; // Transición suave para la opacidad
+        pointer-events: none; // Permite clics a través del pseudo-elemento
+      }
+  
+      &:hover:after {
+        opacity: 1; // Hace visible el pseudo-elemento al pasar el ratón
+      }
+    }
+  }
+  
+  
+  @media (max-width: 774px) {
+    flex-direction: column;
+    align-items: center; 
+
+    .col {
+      width: 100%; 
+      margin-bottom: 20px; 
+    }
+
+    .button-container {
+      justify-content: center;
+    }
+
+    .impreso-inicio {
+      width: 100%;
+      margin-top: 30px;
+    
+      img {
+        width: 70%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px; 
+      }
+    }
   }
 }
-
 
 
 .footer-container {
@@ -343,7 +418,7 @@ content section
 
 #wax-footer {
   width: 100vw;
-  padding-bottom: 5rem;
+  padding-bottom: 0;
   padding-top: 3rem;
   background-color: $light-secondary;
   display: flex;
@@ -362,6 +437,11 @@ content section
     font-family: $logo-font;
     padding-bottom: 1em;
     margin: 0;
+    img {
+      width: 300px;
+      height: auto;
+      margin-bottom: 20px;
+    }
   }
   .footer-description {
     font-family: $body-font;
@@ -392,34 +472,8 @@ content section
       margin-bottom: .3em;
     }
     a {
-      color: $text-color;
+      color: $text;
       font-weight: 300;
-    }
-  }
-  .footer-copyright {
-    display: flex;
-    align-items: flex-end;
-    margin: $margin 0 $margin 0;
-    p {
-      font-size: .9em;
-      line-height: 1.2;
-      font-family: $body-font;
-      margin-right: 20px;
-    }
-    a {
-      text-decoration: none;
-    }
-    img {
-      height: 25px;
-      margin-right: 0.5rem;
-    }
-    @media (max-width: 751px) {
-      flex-direction: column;
-      align-items: flex-start;
-      img {
-        margin-right: 0;
-        margin-bottom: 20px
-      }
     }
   }
   .footer-logos {
@@ -430,7 +484,7 @@ content section
     align-items: flex-end;
     font-family: $body-font;
     font-size: .9em;
-    margin-top: 35px;
+    margin-top: 50px;
     a {
         text-decoration: none;
     }
@@ -460,6 +514,33 @@ content section
       }
     }
   }
+  .footer-copyright {
+    display: flex;
+    align-items: flex-end;
+    margin: $margin 0 $margin 0;
+    p {
+      font-size: .9em;
+      line-height: 1.2;
+      font-family: $body-font;
+      margin-right: 20px;
+    }
+    a {
+      text-decoration: none;
+    }
+    img {
+      height: 25px;
+      margin-right: 0.5rem;
+    }
+    @media (max-width: 751px) {
+      flex-direction: column;
+      align-items: flex-start;
+      img {
+        margin-right: 0;
+        margin-bottom: 20px
+      }
+    }
+  }
+
 }
 
 
@@ -565,7 +646,7 @@ item pages (iiif + metadata)
       font-family: $heading-font;
       font-weight: bold;
       font-size: 3em;
-      color: $text-color !important;
+      color: $text !important;
       text-decoration: none !important;
       background-color: $bg-color;
       margin: 0;
@@ -615,7 +696,7 @@ search box
     .result {
       padding: 1em;
       a {
-        color: $text-color;
+        color: $text;
         text-decoration: none;
         display: flex;
         justify-content: flex-start;
@@ -649,11 +730,11 @@ search box
       margin-right: .5em;
       margin-top: 1rem;
       font-family: $heading-font;
-      border-color: $text-color;
+      border-color: $text;
     }
     .active{
       @extend .facet;
-      background-color: $text-color;
+      background-color: $text;
       color: $bg-color;
     }
   }
@@ -807,11 +888,17 @@ button {
 
 button:hover .button-text {
   transform: translateX(-20%); /* Mueve el texto hacia la izquierda */
+  cursor: pointer;
 }
 
 button:hover .icon {
   transform: translateX(0%); /* Mueve el icono hacia su posición visible */
   opacity: 1;
+  cursor: pointer;
+}
+
+button, button:focus, button:active {
+  outline: none;
 }
 
 

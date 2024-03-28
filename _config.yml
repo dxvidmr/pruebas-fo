@@ -17,8 +17,8 @@
 # Feel free to change these! For more info, refer to:
 # ~> https://jekyllrb.com/docs/configuration/options/
 
-title:            'Todos a una'
-description:      'Edición y archivo colaborativo. Sitio web en pruebas'
+title:            'Fuenteovejuna Social'
+description:      'Edición y archivo participativos sobre Fuenteovejuna, de Lope de Vega'
 url:              'https://dxvidmr.github.io'
 baseurl:          '/pruebas-fo'
 copyright:        'David Merino Recalde 2024'
