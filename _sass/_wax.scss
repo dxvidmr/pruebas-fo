@@ -144,6 +144,10 @@ header & nav bar
     color: $accent-hover;
   }
 
+  .navbar-brand:hover img {
+    opacity: 0.7;
+  }
+
   .navbar-toggler {
     background-color: $secondary;
   }
@@ -334,8 +338,8 @@ content section
   
     a {
       display: inline-block;
-      text-decoration: none; // Elimina el subrayado por defecto de los enlaces
-      color: inherit; // Hereda el color del texto del padre o especifica uno
+      text-decoration: none; 
+      color: inherit;
   
       img {
         width: 70%;
@@ -343,37 +347,14 @@ content section
         display: block;
         margin: 0 auto;
         border-radius: 15px;
-        transition: transform 0.3s ease; // Efecto suave para el movimiento
+        transition: transform 0.3s ease; 
       }
   
       &:hover img {
-        transform: translateY(-5px); // Mueve la imagen hacia arriba
-      }
-  
-      &:hover:after {
-        content: "Lee Fuenteovejuna"; // Muestra este mensaje como si fuera un botón
-        position: absolute;
-        left: 50%;
-        top: 100%; // Posiciona justo debajo de la imagen
-        transform: translateX(-50%); // Centra el pseudo-elemento
-        width: auto; // Ajusta al contenido o especifica un ancho
-        padding: 10px 15px; // Espaciado interno para dar forma al botón
-        background-color: $accent; // Color de fondo del botón
-        color: $background; // Color del texto del botón
-        text-align: center;
-        border-radius: 99rem; // Bordes redondeados
-        white-space: nowrap; // Asegura que el texto esté en una sola línea
-        opacity: 0; // Comienza invisible
-        transition: opacity 0.3s ease; // Transición suave para la opacidad
-        pointer-events: none; // Permite clics a través del pseudo-elemento
-      }
-  
-      &:hover:after {
-        opacity: 1; // Hace visible el pseudo-elemento al pasar el ratón
+        transform: translateY(-5px);
       }
     }
   }
-  
   
   @media (max-width: 774px) {
     flex-direction: column;
@@ -402,6 +383,9 @@ content section
     }
   }
 }
+
+
+
 
 
 .footer-container {
@@ -441,6 +425,10 @@ content section
       width: 300px;
       height: auto;
       margin-bottom: 20px;
+      @media (max-width: 430px) {
+        width: 250px;
+        height: auto;
+      }
     }
   }
   .footer-description {
