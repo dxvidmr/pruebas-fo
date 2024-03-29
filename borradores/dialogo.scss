@@ -1,0 +1,32 @@
+.dialogue {
+    font-family: $body-font;
+    background-color: $secondary;
+    border: none;
+    border-radius: 20px;
+    padding: 1rem;
+    margin-bottom: 40px;
+    .line, .continuation {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 0; // Elimina o reduce los márgenes inferiores para controlar el espaciado entre líneas
+      .character {
+        min-width: 100px; // Asegura que los nombres tengan espacio suficiente
+        font-weight: bold;
+      }
+      .text {
+        margin-left: 20px; // Espacio entre el nombre del personaje y su texto
+        margin-bottom: 0; // Asegura que no haya un margen extra después de cada línea de diálogo
+      }
+    }
+    .special {
+      // Ajustes para "Morir" para asegurarse de que se alinea bien y no introduce espaciado extra
+      margin-left: 170px; // Ajusta según sea necesario para alinear correctamente
+      margin-bottom: 0; // Asegura que no añade un margen extra inferior
+    }
+    .continuation {
+      margin-left: 120px; // Ajusta este valor para alinear con el texto después de "Esteban"
+      .text {
+        margin-left: 0;
+      }
+    }
+  }
