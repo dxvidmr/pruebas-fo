@@ -21,19 +21,25 @@ $thumbnail-height: 140px;
 $thumbnail-width: 140px;
 
 /* colors */
+$text:          #040316;
+$background:    #fbfbfe;
+$accent:        #52664d; /* 600 */
+$accent-hover:  #8ca286; /* 400 */
+$secondary:     #f6f8f5; /*  50 */
 
-$text-color:      #100c01;
-$bg-color:        #ffffff;
-$neutral:         #EBEBEB;
-$accent-light:    #98A781;
-$accent-dark:     #727E62;
-$gray-light:      #F7F7F7;
+/* shades */
+$accent-50:  rgb(246, 248, 245);
+$accent-100: rgb(234, 239, 233);
+$accent-200: rgb(215, 222, 212);
+$accent-300: rgb(181, 196, 177);
+$accent-400: rgb(140, 162, 134);
+$accent-500: rgb(106, 130, 101);
+$accent-600: rgb(82, 102, 77);
+$accent-700: rgb(69, 84, 65);
+$accent-800: rgb(57, 69, 54);
+$accent-900: rgb(48, 57, 46);
+$accent-950: rgb(23, 29, 22);
 
-$text: #040316;
-$background: #fbfbfe;
-$primary: #52664d;
-$secondary: #bbc9b0;
-$light-secondary: #f2f5f0;
 
 /* viewport sizes */
 

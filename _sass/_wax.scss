@@ -9,7 +9,7 @@ main body & containers
 html, body {
   margin: 0;
   padding: 0;
-  background-color: $bg-color;
+  background-color: $background;
   font-family: $body-font;
   font-display: auto;
   -webkit-font-smoothing: antialiased;
@@ -18,13 +18,13 @@ html, body {
 }
 
 a {
-  color: $primary;
+  color: $accent;
   font-weight: normal;
   position: relative;
   text-decoration: none;
 
   &:hover {
-    color: $primary;
+    color: $accent;
     text-decoration: none;
   }
 
@@ -34,7 +34,7 @@ a {
     width: 100%;
     height: 2px;
     border-radius: 4px;
-    background-color: $secondary;
+    background-color: $accent;
     bottom: 0;
     left: 0;
     transform-origin: right;
@@ -92,8 +92,8 @@ header & nav bar
 */
 
 .menu-container {
-  background-color: $light-secondary; 
-  border: 1px solid $light-secondary; 
+  background-color: $secondary; 
+  border: 1px solid $secondary; 
   border-radius: 20px;
   padding: 1rem;
   margin: 1rem auto;
@@ -123,7 +123,7 @@ header & nav bar
 
 #wax-header {
   
-  color: $primary;
+  color: $accent;
   z-index: 100000;
   padding: $margin;
   font-family: $heading-font;
@@ -131,7 +131,7 @@ header & nav bar
   .navbar-brand {
     font-family: $logo-font;
     font-weight: 700;
-    color: $primary;
+    color: $accent;
     font-size: 2rem;
     white-space: normal;
   }
@@ -141,41 +141,41 @@ header & nav bar
   }
 
   .navbar-brand:hover {
-    color: $secondary;
+    color: $accent-hover;
   }
 
   .navbar-toggler {
-    background-color: $light-secondary;
+    background-color: $secondary;
   }
 
   .navbar-nav {
     .nav-item {
       z-index: 1000000;
-      background-color: $light-secondary;
+      background-color: $secondary;
     }
     .nav-link {
-      color: $primary;
+      color: $accent;
       font-weight: 700;
     }
     .nav-link:hover {
-      color: $secondary;
+      color: $accent-hover;
     }
     .nav-link:active {
-      background-color: $light-secondary;
+      background-color: $secondary;
     }
     .dropdown-menu {
-      background-color: darken($light-secondary, 2%);
-      border-color: $light-secondary;
+      background-color: darken($secondary, 2%);
+      border-color: $secondary;
       .dropdown-item {
-        color: $primary;
+        color: $accent;
         font-weight: 500;
       }
       .dropdown-item:focus {
-        background-color: $light-secondary;
+        background-color: $secondary;
       }
       .dropdown-item:hover {
-        background-color: darken($light-secondary, 2%);
-        color: $secondary;
+        background-color: darken($secondary, 2%);
+        color: $accent-hover;
       }
     }
   }
@@ -187,7 +187,7 @@ content section
 
 */
 #wax-main {
-  background-color: $bg-color;
+  background-color: $background;
   width: 100vw;
   max-width: 100%;
   padding-top: $margin;
@@ -263,7 +263,7 @@ content section
     }
 
     .inline-image-reference {
-      background-color: $light-secondary;
+      background-color: $secondary;
       margin-top: $more-margin;
       margin-bottom: $more-margin;
       display: inline-block;
@@ -313,7 +313,7 @@ content section
     font-family: $heading-font;
     font-size: 4rem;
     font-weight: 700;
-    color: $primary;
+    color: $accent;
     margin: 0;
     padding: 0;
   }
@@ -358,7 +358,7 @@ content section
         transform: translateX(-50%); // Centra el pseudo-elemento
         width: auto; // Ajusta al contenido o especifica un ancho
         padding: 10px 15px; // Espaciado interno para dar forma al botón
-        background-color: $primary; // Color de fondo del botón
+        background-color: $accent; // Color de fondo del botón
         color: $background; // Color del texto del botón
         text-align: center;
         border-radius: 99rem; // Bordes redondeados
@@ -405,8 +405,8 @@ content section
 
 
 .footer-container {
-  background-color: $light-secondary; /* Asegúrate de que esta variable esté definida o usa un color directo */
-  border: 1px solid $light-secondary; /* Ídem */
+  background-color: $secondary; /* Asegúrate de que esta variable esté definida o usa un color directo */
+  border: 1px solid $secondary; /* Ídem */
   border-radius: 20px;
   padding: 1rem;
   margin: 1rem auto; /* Centra el contenedor y aplica márgenes superior e inferior */
@@ -420,7 +420,7 @@ content section
   width: 100vw;
   padding-bottom: 0;
   padding-top: 3rem;
-  background-color: $light-secondary;
+  background-color: $secondary;
   display: flex;
   text-align: left;
   col {
@@ -432,7 +432,7 @@ content section
     min-width: 250px;
   }
   .footer-title {
-    color: $primary;
+    color: $accent;
     font-weight: 500;
     font-family: $logo-font;
     padding-bottom: 1em;
@@ -574,7 +574,7 @@ content section
 .wax-parallax {
 
   .parallax-image {
-    background-color: $light-secondary;
+    background-color: $secondary;
     width: 100vw;
     height: $parallax-height;
     max-height: 55vh;
@@ -585,17 +585,17 @@ content section
   .parallax-caption {
     margin: 0 auto;
     width: 100vw;
-    background-color: $light-secondary;
+    background-color: $secondary;
     padding: $less-margin 0;
     a {
-      color: $primary;
+      color: $accent;
       font-weight: 700;
       text-decoration: none;
     }
 
     a:hover {
       text-decoration: underline;
-      color: $secondary;
+      color: $accent-hover;
     }
   }
 }
@@ -620,7 +620,7 @@ item pages (iiif + metadata)
     max-height: 80vh;
     background-color: $background;
     width:    100%;
-    border:   1px solid $light-secondary;
+    border:   1px solid $secondary;
     margin:   $more-margin 0 $more-margin 0;
 
     a {
@@ -648,10 +648,10 @@ item pages (iiif + metadata)
       font-size: 3em;
       color: $text !important;
       text-decoration: none !important;
-      background-color: $bg-color;
+      background-color: $background;
       margin: 0;
       &:hover{
-        color: $secondary !important;
+        color: $accent-hover !important;
       }
     }
   }
@@ -668,7 +668,7 @@ item pages (iiif + metadata)
   font-family: $body-font;
   font-weight: 300;
   max-width: 100%;
-  border: $light-secondary 1px solid;
+  border: $secondary 1px solid;
   border-radius: 3px;
   padding: $less-margin;
 }
@@ -688,7 +688,7 @@ search box
     margin-bottom: $more-margin;
     &:focus {
         box-shadow: none ;
-        border-color: $light-secondary;
+        border-color: $secondary;
     }
   }
   #results {
@@ -710,12 +710,12 @@ search box
           margin: 0 !important;
           padding: 0;
           .title{
-            color: $secondary;
+            color: $accent-hover;
           }
         }
       }
       &:hover {
-        background-color: $light-secondary
+        background-color: $secondary
       }
     }
   }
@@ -735,7 +735,7 @@ search box
     .active{
       @extend .facet;
       background-color: $text;
-      color: $bg-color;
+      color: $background;
     }
   }
   .wax-gallery {
@@ -786,7 +786,7 @@ search box
         .info {
           text-decoration: none;
           font-family: $heading-font !important;
-          color: $bg-color !important;
+          color: $background !important;
           background-color: transparent;
           opacity: 0;
           filter: alpha(opacity=0);
@@ -805,7 +805,7 @@ search box
         // .info {
         //   text-decoration: none;
         //   font-family: $heading-font !important;
-        //   color: $bg-color !important;
+        //   color: $background !important;
         //   background-color: transparent;
         //   opacity: 0;
         //   filter: alpha(opacity=0);
@@ -825,7 +825,7 @@ search box
           overflow: hidden;
           top: 0;
           left: 0;
-          background-color: $secondary;
+          background-color: $accent-hover;
           opacity: 0;
           -webkit-transition:opacity 0.5s ease-in-out;
           transition: opacity 0.5s ease-in-out;
@@ -857,8 +857,8 @@ button {
   display: inline-flex; /* Cambiado a inline-flex para permitir expansión */
   padding: 1.1rem 2.5rem; /* Ajusta el padding para centrar el texto inicialmente */
   border-radius: 99rem;
-  color: $light-secondary;
-  background-color: $primary;
+  color: $secondary;
+  background-color: $accent;
   align-items: center;
   justify-content: center; /* Centra el contenido del botón */
   gap: 1em;
