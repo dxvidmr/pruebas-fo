@@ -886,3 +886,59 @@ button, button:focus, button:active {
 }
 
 
+
+
+
+
+.bento-box {
+  border-radius: 20px;
+  background-color: $secondary;
+  margin-bottom: 25px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column; // Esto coloca .texthero encima de .buttonparticipa
+  justify-content: space-between; // Esto coloca espacio entre .texthero y .buttonparticipa
+  min-height: 500px;
+  height: fit-content; // Altura fija para '.bento-box'.
+}
+
+
+.bento-box h1 {
+  font-family: $heading-font;
+  color: $accent;
+  font-weight: 700 !important;
+}
+.bento-box h3 {
+  font-family: $heading-font;
+  color: $text;
+  font-weight: 300 !important;
+}
+
+
+.button-bento {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.row-custom {
+  @media (min-width: 992px) { // Esto aplica para tamaños lg y superiores según Bootstrap
+    .col-lg-6 {
+      margin-bottom: 20px; // Agrega un margen inferior a cada bento-box
+
+      // Asegúrate de que la última bento-box no tenga un margen inferior
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.bento-img {
+  background-image: url(../img/impreso.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
