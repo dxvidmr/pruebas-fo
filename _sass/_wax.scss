@@ -892,7 +892,6 @@ button, button:focus, button:active {
 
 .bento-box {
   border-radius: 20px;
-  background-color: $secondary;
   margin-bottom: 25px;
   padding: 50px;
   display: flex;
@@ -902,12 +901,12 @@ button, button:focus, button:active {
   height: fit-content; // Altura fija para '.bento-box'.
 }
 
-
 .bento-box h1 {
   font-family: $heading-font;
   color: $accent;
   font-weight: 700 !important;
 }
+
 .bento-box h3 {
   font-family: $heading-font;
   color: $text;
