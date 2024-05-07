@@ -50,7 +50,11 @@ a {
 
 
 // Anular estilo enlaces
-#wax-header a {
+#wax-header a,
+a.image-link,
+a.button-link,
+a.img-link,
+a.title-bento-link {
   &::before {
     content: none;
   }
@@ -58,20 +62,6 @@ a {
     content: none;
   }
 }
-
-a.image-link::before {
-  content: none;
-}
-
-a.button-link {
-  &::before {
-    content: none;
-  }
-  &:hover::before {
-    content: none;
-  }
-}
-
 
 p {
   color: $text;
@@ -158,7 +148,7 @@ header & nav bar
       background-color: $secondary;
     }
     .nav-link {
-      color: $accent;
+      color: $accent-strong;
       font-weight: 700;
     }
     .nav-link:hover {
@@ -839,15 +829,16 @@ search box
 
 button {
   display: inline-flex; /* Cambiado a inline-flex para permitir expansión */
-  padding: 1.1rem 2.5rem; /* Ajusta el padding para centrar el texto inicialmente */
-  border-radius: 99rem;
-  color: $secondary;
+  padding: 1rem 2.5rem; /* Ajusta el padding para centrar el texto inicialmente */
+  border-radius: 20px;
+  color: $text-white;
   background-color: $accent;
   align-items: center;
   justify-content: center; /* Centra el contenido del botón */
   gap: 1em;
   border: none;
   font-size: 18px;
+  font-weight: 600;
   position: relative; /* Importante para el posicionamiento absoluto del icono */
   overflow: hidden;
   transition: padding 0.5s ease; /* Suaviza la transición del padding */
@@ -887,32 +878,98 @@ button, button:focus, button:active {
 
 
 
-
+/* BENTO */
 
 
 .bento-box {
   border-radius: 20px;
   margin-bottom: 25px;
   padding: 50px;
-  display: flex;
-  flex-direction: column; // Esto coloca .texthero encima de .buttonparticipa
-  justify-content: space-between; // Esto coloca espacio entre .texthero y .buttonparticipa
-  min-height: 500px;
   height: fit-content; // Altura fija para '.bento-box'.
+}
+
+.box1 {
+  background-color: $color-100;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  h3 {
+    font-family: $heading-font;
+    color: $text;
+    font-weight: 300 !important;
+  }
+}
+
+.bento-img {
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease-in-out; /* Suaviza la transición del efecto zoom */
+}
+
+.bento-img:hover {
+  transform: scale(1.05); /* Aumenta el tamaño de la imagen */
+}
+
+#impreso-portada {
+  background-image: url(../img/impreso.jpg);
+}
+
+#box-archivo {
+  background-image: url(../img/archivo.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#box-edicion {
+  background-image: url(../img/edicion2009.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .bento-box h1 {
   font-family: $heading-font;
-  color: $accent;
+  color: $accent-strong;
   font-weight: 700 !important;
 }
 
-.bento-box h3 {
-  font-family: $heading-font;
-  color: $text;
-  font-weight: 300 !important;
+.title-bento {
+  background-color: rgba($accent, 0.8);
+  backdrop-filter: blur(1px);
+  border-radius: 20px;
+  padding: 10px 50px 10px;
+  transition: transform 0.3s ease-in-out; /* Suaviza la transición del efecto de escala */
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    font-family: $heading-font;
+    color: $text-white;
+    font-weight: 600 !important;
+  }
 }
 
+.title-bento:hover {
+  transform: scale(1.05); /* Aumenta el tamaño del div */
+}
+
+.title-bento-link {
+  display: block; /* Hace que el enlace ocupe todo el espacio del div contenedor */
+  text-decoration: none; /* Elimina el subrayado del texto del enlace */
+  color: inherit; /* Hereda el color del texto del elemento padre */
+}
 
 .button-bento {
   width: 100%;
@@ -920,6 +977,11 @@ button, button:focus, button:active {
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 20px;
+}
+
+.button-bentobox {
+  background-color: rgba($accent, 0.8);
+  backdrop-filter: blur(1px);
 }
 
 .row-custom {
@@ -935,9 +997,3 @@ button, button:focus, button:active {
   }
 }
 
-.bento-img {
-  background-image: url(../img/impreso.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}

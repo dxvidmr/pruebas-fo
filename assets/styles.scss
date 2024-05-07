@@ -6,8 +6,8 @@ variable declaration
 */
 
 /* branding */
-$logo: url("{{ '/img/logo/imagotipo.svg' | absolute_url }}");
-$icon: url("{{ '/img/logo/isotipo.svg' | absolute_url }}");
+$logo: url("{{ '/img/logo/imagotipo_marron.svg' | absolute_url }}");
+$icon: url("{{ '/img/logo/isotipo_marron.svg' | absolute_url }}");
 
 /* text */
 
@@ -22,10 +22,32 @@ $thumbnail-width: 140px;
 
 /* colors */
 $text:          #040316;
+$text-white:    #ffffff;
 $background:    #fbfbfe;
-$accent:        #52664d; /* 600 */
-$accent-hover:  #8ca286; /* 400 */
-$secondary:     #eaefe9; /*  100 */
+$accent:        #9e8f71;
+$accent-strong: #796855;
+$accent-hover:  #c6c0ab;
+$secondary:     #eeede6;
+
+/* anterior
+/*$accent:        $accent-600;
+/*$accent-hover:  $accent-400;
+/*$secondary:     $accent-100;
+
+/* marrón shades */
+$color-50: #f8f7f4;
+$color-100: #eeede6;
+$color-200: #dcd9cc;
+$color-300: #c6c0ab;
+$color-400: #afa489;
+$color-500: #9e8f71;
+$color-600: #917f65;
+$color-700: #796855;
+$color-800: #645648;
+$color-900: #52483c;
+$color-950: #2b251f;
+
+
 
 /* shades */
 $accent-50:  rgb(246, 248, 245);
