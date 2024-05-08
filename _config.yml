@@ -95,8 +95,8 @@ search:
 # submenu via `sub`.
 
 menu:
-  - label: 'Info'
-    link: '/info'
+  - label: 'Información'
+    link: '/informacion'
   - label: 'Aprende'
     sub:
       - label: 'Sobre Fuente Ovejuna'
