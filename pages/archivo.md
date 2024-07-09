@@ -6,13 +6,10 @@ permalink: /archivo/
 
 {% include search_box.html search='main' %}
 
-En construcción...
-
-## Navega por etiquetas
+### Filtra por tipo de documento
 {% include collection_gallery.html facet_by='_tags' collection='fuenteovejuna' %}
 
-## Por tipo de objeto
-
+<!--## Por tipo de objeto
 ### Ediciones
 {% include collection_gallery.html facet_by='_tags' only='Edición' collection='fuenteovejuna' %}
 ### Representaciones
@@ -20,4 +17,4 @@ En construcción...
 ### Copias
 {% include collection_gallery.html facet_by='_tags' only='Copia' collection='fuenteovejuna' %}
 ### Recursos didácticos
-{% include collection_gallery.html facet_by='_tags' only='Recurso didáctico' collection='fuenteovejuna' %}
+{% include collection_gallery.html facet_by='_tags' only='Recurso didáctico' collection='fuenteovejuna' %}-->
