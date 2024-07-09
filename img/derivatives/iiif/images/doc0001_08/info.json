@@ -1,0 +1,45 @@
+---
+layout: none
+---
+{
+  "@context": "http://iiif.io/api/image/2/context.json",
+  "@id": "{{ '/' | absolute_url }}img/derivatives/iiif/images/doc0001_08",
+  "protocol": "http://iiif.io/api/image",
+  "width": 3270,
+  "height": 2418,
+  "sizes": [
+    {
+      "width": 3270,
+      "height": 2418
+    },
+    {
+      "width": 250,
+      "height": 185
+    },
+    {
+      "width": 1140,
+      "height": 843
+    }
+  ],
+  "profile": [
+    "http://iiif.io/api/image/2/level0.json",
+    {
+      "supports": [
+        "cors",
+        "sizeByWhListed",
+        "baseUriRedirect"
+      ]
+    }
+  ],
+  "tiles": [
+    {
+      "width": 512,
+      "scaleFactors": [
+        1,
+        2,
+        4,
+        8
+      ]
+    }
+  ]
+}

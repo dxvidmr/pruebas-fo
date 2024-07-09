@@ -86,6 +86,7 @@ search:
           - _date
           - _tags
           - description
+          - localización
 
 # --------------------------------------------------------------
 # SITE MENU SETTINGS
