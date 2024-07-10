@@ -18,5 +18,3 @@ permalink: /archivo/
 {% include collection_gallery.html facet_by='_tags' only='Copia' collection='fuenteovejuna' %}
 ### Recursos didácticos
 {% include collection_gallery.html facet_by='_tags' only='Recurso didáctico' collection='fuenteovejuna' %}-->
-
-<iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1jjTyDDROB_Fnd9_q3W8ZOkG4SFXkxKAFhKTr6a2HUNc&font=Default&lang=en&initial_zoom=2&height=650&css=https://github.com/dxvidmr/pruebas-fo/blob/main/assets/timelinejs.css' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>

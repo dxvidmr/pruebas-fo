@@ -937,6 +937,30 @@ button, button:focus, button:active {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
+}
+
+.promo-banner {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  background-color: rgba(224, 37, 37);
+  padding: 20px ;
+  border-radius: 20px;
+  p {
+    color: $text-white;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+}
+
+#box-lineatiempo {
+  background-color: $secondary;
+  background-image: url(../img/lineatiempo.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .bento-box h1 {
@@ -1004,3 +1028,12 @@ button, button:focus, button:active {
   }
 }
 
+/* Timeline JS*/
+
+h2.tl-headline {
+  text-transform: none !important;
+}
+
+h2.tl-headline-title {
+  text-transform: none !important;
+}
