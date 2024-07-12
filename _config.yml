@@ -96,12 +96,16 @@ search:
 # submenu via `sub`.
 
 menu:
+  - label: 'Inicio'
+    link: '/'
   - label: 'Información'
     link: '/informacion'
   - label: 'Aprende'
     sub:
       - label: 'Sobre Fuente Ovejuna'
         link: '/exhibiciones/'
+      - label: 'Línea de tiempo de puestas en escena'
+        link: '/lineadetiempo/'
       - label: 'Bibliografía'
         link: '/bibliografia'
   - label: 'Edición'

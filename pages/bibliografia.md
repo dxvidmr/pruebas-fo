@@ -1,7 +1,9 @@
 ---
-layout: page
+layout: bibliografia
 title: Bibliografía
 permalink: /bibliografia/
 ---
 
-En construcción...
+Cargada a través de la API de Zotero. En pruebas.
+
+<div id="bibliography"></div>
