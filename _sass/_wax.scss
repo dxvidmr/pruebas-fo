@@ -105,7 +105,6 @@ header & nav bar
     margin-left: auto; // Mantiene el toggler a la derecha
     position: absolute;  // Posicionamiento absoluto para evitar que afecte la disposición de otros elementos
     right: 20px;  // Alinea el toggler a la derecha
-    top: 35px;
   }
 }
 
@@ -115,7 +114,7 @@ header & nav bar
   
   color: $accent;
   z-index: 100000;
-  padding: $margin;
+  padding: $less-margin; /*margin en origen*/
   font-family: $heading-font;
 
   .navbar-brand {
@@ -185,7 +184,7 @@ content section
   width: 100vw;
   max-width: 100%;
   padding-top: $margin;
-  padding-bottom: 5rem;
+  padding-bottom: 0; /*5 rem en origen*/
 
   h1, h2, h3, h4, h5, h5 {
     margin-bottom: $less-margin;
@@ -463,7 +462,8 @@ content section
         text-decoration: none;
     }
     img {
-        height: 50px;
+        max-height: 50px;
+        width: auto;
         margin-right: 20px;
     }
     .logo-with-text {
@@ -502,7 +502,8 @@ content section
       text-decoration: none;
     }
     img {
-      height: 25px;
+      max-height: 25px;
+      width: auto;
       margin-right: 0.5rem;
     }
     @media (max-width: 751px) {
@@ -917,30 +918,7 @@ button, button:focus, button:active {
   background-image: url(../img/impreso.jpg);
 }
 
-#box-archivo {
-  background-image: url(../img/archivo.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-#box-experiencias {
-  background-image: url(../img/experiencias.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-#box-edicion {
-  background-image: url(../img/edicion2009.jpg);
+.box-img-fondo {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -951,28 +929,22 @@ button, button:focus, button:active {
   position: relative;
 }
 
-.promo-banner {
-  position: absolute;
-  top: 50px;
-  right: 50px;
-  background-color: red;
-  padding: 20px ;
-  border-radius: 20px;
-  p {
-    color: $text-white;
-    margin-bottom: 0;
-    font-weight: bold;
-    font-size: 1.2rem;
-  }
+#box-archivo {
+  background-image: url(../img/archivo.jpg);
+}
+
+#box-experiencias {
+  background-image: url(../img/experiencias.jpg);
+}
+
+#box-edicion {
+  background-image: url(../img/edicion2009.jpg);
 }
 
 #box-lineatiempo {
-  background-color: $secondary;
-  background-image: url(../img/lineatiempo.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: url(../img/lineadetiempo.jpg);
 }
+
 
 .bento-box h1 {
   font-family: $heading-font;
@@ -1047,4 +1019,25 @@ button, button:focus, button:active {
       }
     }
   }
+}
+
+.promo-banner {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  background-color: red;
+  padding: 20px ;
+  border-radius: 20px;
+  p {
+    color: $text-white;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+}
+
+
+/* TIMELINE JS*/ 
+.tl-headline {
+  text-transform: none !important; // Esto evita la transformación a mayúsculas
 }
