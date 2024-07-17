@@ -102,7 +102,7 @@ menu:
     link: '/informacion'
   - label: 'Aprende'
     sub:
-      - label: 'Sobre Fuente Ovejuna'
+      - label: 'Sobre Fuenteovejuna'
         link: '/exhibiciones/'
       - label: 'Línea de tiempo de puestas en escena'
         link: '/lineadetiempo/'
