@@ -12,7 +12,7 @@ Este sitio está en construcción. Si envías ahora tu participación es posible
 
 <div class="row"> <!--Colaboraciones-->
     <div class="col-lg-4">
-        <div class="bento-box" id="box-experiencias">
+        <div class="bento-box box-img-fondo" id="box-experiencias">
             <div class="">
             </div>
             <a href="{{ site.baseurl }}/participa/archivoexperiencial" class="title-bento-link">
@@ -23,7 +23,7 @@ Este sitio está en construcción. Si envías ahora tu participación es posible
         </div>
     </div>
         <div class="col-lg-4">
-        <div class="bento-box" id="box-archivo">
+        <div class="bento-box box-img-fondo" id="box-archivo">
             <div class="">
             </div>
             <a href="{{ site.baseurl }}/participa/archivodocumental" class="title-bento-link">
@@ -34,7 +34,7 @@ Este sitio está en construcción. Si envías ahora tu participación es posible
         </div>
     </div>
     <div class="col-lg-4">
-        <div class="bento-box" id="box-edicion">
+        <div class="bento-box box-img-fondo" id="box-edicion">
             <div class="">
             </div>
             <a href="{{ site.baseurl }}/participa" class="title-bento-link">
