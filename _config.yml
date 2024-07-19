@@ -84,9 +84,13 @@ search:
         fields: # the metadata fields to index
           - label
           - _date
+          - manifestationtype
           - _tags
+          - subtype
           - description
-          - localización
+          - source
+          - country
+          - city
 
 # --------------------------------------------------------------
 # SITE MENU SETTINGS
