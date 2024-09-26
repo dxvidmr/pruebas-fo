@@ -42,9 +42,6 @@ Este sitio está en construcción. Si envías ahora tu participación es posible
                     <h4>Participa en la edición </h4>
                 </div>
             </a>
-            <div class="promo-banner">
-                <p>¡Muy pronto!</p>
-            </div>
         </div>
     </div>
 </div>
