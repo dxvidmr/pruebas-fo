@@ -112,7 +112,7 @@ menu:
         link: '/lineadetiempo/'
       - label: 'Bibliografía'
         link: '/bibliografia'
-  - label: 'Edición'
+  - label: 'Sala de lectura'
     link: '/ediciondigital'
   - label: 'Archivo'
     link: '/archivo/'
