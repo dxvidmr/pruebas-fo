@@ -186,7 +186,6 @@ content section
 */
 #wax-main {
   background-color: $background;
-  width: 100vw;
   max-width: 100%;
   padding-top: $margin;
   padding-bottom: 0; /*5 rem en origen*/
@@ -279,104 +278,6 @@ content section
   }
 }
 
-#portada {
-  display: flex;
-  flex-wrap: wrap; 
-  justify-content: space-between; 
-  align-items: stretch;
-  min-height: 80vh;
-  padding-top: 10vh;
-  padding-bottom: 10vh;
-  text-align: left;
-  width: 100%;
-
-  .col { 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex: 1; 
-    min-width: 300px; 
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  .texto-container,
-  .impreso-inicio {
-    width: 100%;
-  }
-
-  h1 {
-    font-family: $heading-font;
-    font-size: 4rem;
-    font-weight: 700;
-    color: $accent;
-    margin: 0;
-    padding: 0;
-  }
-  h3 {
-    font-size: 1.5rem;
-    font-weight: 400;
-  }
-  .button-container {
-    display: flex;
-    justify-content: left;
-    width: 100%;
-    margin-top: 50px;
-  }
-
-  .impreso-inicio {
-    position: relative; // Necesario para posicionar el pseudo-elemento de forma absoluta
-    display: inline-block; // Asegura que el contenedor se ajuste al tamaño del contenido
-  
-    a {
-      display: inline-block;
-      text-decoration: none; 
-      color: inherit;
-  
-      img {
-        width: 70%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-        border-radius: 15px;
-        transition: transform 0.3s ease; 
-      }
-  
-      &:hover img {
-        transform: translateY(-5px);
-      }
-    }
-  }
-  
-  @media (max-width: 774px) {
-    flex-direction: column;
-    align-items: center; 
-
-    .col {
-      width: 100%; 
-      margin-bottom: 20px; 
-    }
-
-    .impreso-inicio {
-      width: 100%;
-      margin-top: 30px;
-    
-      img {
-        width: 70%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-        margin-bottom: 20px; 
-      }
-    }
-  }
-}
-
-
-
-
 
 .footer-container {
   background-color: $secondary; /* Asegúrate de que esta variable esté definida o usa un color directo */
@@ -391,7 +292,7 @@ content section
 
 
 #wax-footer {
-  width: 100vw;
+  width: 100%;
   padding-bottom: 0;
   padding-top: 3rem;
   background-color: $secondary;
@@ -424,7 +325,7 @@ content section
   .footer-description {
     font-family: $body-font;
     margin: 0;
-    font-size: .9em;
+    font-size: 1.2em;
     line-height: 1.2;
   }
   .footer-contact {
@@ -528,18 +429,16 @@ content section
   @extend .container;
 
   margin: 0 auto;
-  max-width: 100%; /* 90%*/
-  width: $total-width;
+  max-width: 100%;
+  width: 100%;
   overflow: flex-wrap;
 }
 
 .full-width {
   width: 100vw;
+  margin: 0;
   position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  padding: 0;
   margin-bottom: $more-margin;
 }
 
@@ -889,17 +788,26 @@ button, button:focus, button:active {
 
 .bento-box {
   border-radius: 20px;
-  margin-bottom: 25px;
   padding: 50px;
-  height: fit-content; // Altura fija para '.bento-box'.
-}
-
-.box1 {
+  margin-bottom: 25px;
+  height: fit-content;
   background-color: $color-100;
-  min-height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
+}
+
+.row.no-negative-margins {
+  margin-left: 0;
+  margin-right: 0;
+  margin: 0;
+  height: 700px;
+}
+
+.bento-info {
+  min-height: 335.5px;
+
   h3 {
     font-family: $heading-font;
     color: $text;
@@ -907,62 +815,41 @@ button, button:focus, button:active {
   }
 }
 
-.bento-img {
-  min-height: 500px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: transform 0.3s ease-in-out; /* Suaviza la transición del efecto zoom */
-}
-
-.bento-img:hover {
-  transform: scale(1.05); /* Aumenta el tamaño de la imagen */
-}
-
-#impreso-portada {
+.bento-lectura {
+  min-height: 700px;
   background-image: url(../img/impreso.jpg);
 }
 
-.box-img-fondo {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.bento-participa {
   min-height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
 }
 
-#box-archivo {
-  background-image: url(../img/archivo.jpg);
-}
+    #box-archivo { background-image: url(../img/archivo.jpg); }
+    #box-experiencias { background-image: url(../img/experiencias.jpg); }
+    #box-edicion { background-image: url(../img/edicion2009.jpg); }
 
-#box-experiencias {
-  background-image: url(../img/experiencias.jpg);
-}
-
-#box-edicion {
-  background-image: url(../img/edicion2009.jpg);
-}
-
-#box-lineatiempo {
+.bento-lineadetiempo {
+  min-height: 400px;
   background-image: url(../img/lineadetiempo.jpg);
 }
 
-
-.bento-box h1 {
-  font-family: $heading-font;
-  color: $accent-strong;
-  font-weight: 700 !important;
+.bento-img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease-in-out; 
 }
+
+.bento-img:hover {
+  transform: scale(1.01);
+} 
+
 
 .title-bento {
   background-color: rgba($accent, 0.8);
   backdrop-filter: blur(1px);
   border-radius: 20px;
   padding: 10px 50px;
-  transition: transform 0.3s ease-in-out; /* Suaviza la transición del efecto de escala */
   h3 {
     margin-top: 0;
     margin-bottom: 0;
@@ -990,57 +877,10 @@ button, button:focus, button:active {
   }
 }
 
-.title-bento:hover {
-  transform: scale(1.05); /* Aumenta el tamaño del div */
-}
-
-.title-bento-link {
-  display: block; /* Hace que el enlace ocupe todo el espacio del div contenedor */
-  text-decoration: none; /* Elimina el subrayado del texto del enlace */
-  color: inherit; /* Hereda el color del texto del elemento padre */
-}
-
-.button-bento {
-  width: 100%;
+.button-right-align {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-bottom: 20px;
+  justify-content: flex-end; /* Alinea el botón al margen derecho */
 }
-
-.button-bentobox {
-  background-color: rgba($accent, 0.8);
-  backdrop-filter: blur(1px);
-}
-
-.row-custom {
-  @media (min-width: 992px) { // Esto aplica para tamaños lg y superiores según Bootstrap
-    .col-lg-6 {
-      margin-bottom: 20px; // Agrega un margen inferior a cada bento-box
-
-      // Asegúrate de que la última bento-box no tenga un margen inferior
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-  }
-}
-
-.promo-banner {
-  position: absolute;
-  top: 50px;
-  right: 50px;
-  background-color: red;
-  padding: 20px ;
-  border-radius: 20px;
-  p {
-    color: $text-white;
-    margin-bottom: 0;
-    font-weight: bold;
-    font-size: 1.2rem;
-  }
-}
-
 
 /* TIMELINE JS*/ 
 .tl-headline {

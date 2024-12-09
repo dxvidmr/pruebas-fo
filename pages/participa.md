@@ -12,39 +12,40 @@ Este sitio está en construcción. Si envías ahora tu participación es posible
 
 <div class="row"> <!--Colaboraciones-->
     <div class="col-lg-4">
-        <div class="bento-box box-img-fondo" id="box-experiencias">
-            <div class="">
-            </div>
-            <a href="{{ site.baseurl }}/participa/archivoexperiencial" class="title-bento-link">
+        <a href="{{ site.baseurl }}/participa/archivoexperiencial" class="img-link">
+            <div class="bento-box bento-img bento-participa" id="box-experiencias">
+                <div class="">
+                </div>
                 <div class="title-bento">
                     <h4>Comparte tu experiencia personal</h4>
                 </div>
-            </a>
-        </div>
-    </div>
-        <div class="col-lg-4">
-        <div class="bento-box box-img-fondo" id="box-archivo">
-            <div class="">
             </div>
-            <a href="{{ site.baseurl }}/participa/archivodocumental" class="title-bento-link">
-                <div class="title-bento">
-                    <h4>Colabora en el Archivo documental</h4>
-                </div>
-            </a>
-        </div>
+        </a>
     </div>
     <div class="col-lg-4">
-        <div class="bento-box box-img-fondo" id="box-edicion">
-            <div class="">
+        <a href="{{ site.baseurl }}/participa/archivodocumental" class="img-link">
+            <div class="bento-box bento-img bento-participa" id="box-archivo">
+                <div class="">
+                </div>
+                <div class="title-bento">
+                    <h4>Colabora en el archivo documental</h4>
+                </div>
             </div>
-            <a href="{{ site.baseurl }}/participa" class="title-bento-link">
+        </a>
+    </div>
+    <div class="col-lg-4">
+        <a href="{{ site.baseurl }}/participa" class="img-link">
+            <div class="bento-box bento-img bento-participa" id="box-edicion">
+                <div class="">
+                </div>
                 <div class="title-bento">
                     <h4>Participa en la edición </h4>
                 </div>
-            </a>
-        </div>
+            </div>
+        </a>
     </div>
 </div>
+
 
 
 
