@@ -8,7 +8,7 @@ Términos y Condiciones del Uso de Datos Personales (inventados)
 
 **1\. Introducción**
 
-Este documento describe los términos y condiciones bajo los cuales el grupo de investigación de la Universitat Autònoma de Barcelona PROLOPE recoge, utiliza y protege los datos personales que usted ("usuario") proporciona mediante el uso de nuestro [sitio web](https://dxvidmr.github.io/pruebas-fo/). Al proporcionar sus datos personales, usted acepta los términos descritos en este documento.
+Este documento describe los términos y condiciones bajo los cuales el grupo de investigación de la Universitat Autònoma de Barcelona PROLOPE recoge, utiliza y protege los datos personales que usted ("usuario") proporciona mediante el uso de nuestro [sitio web](https://dxvidmr.github.io/todosauna/). Al proporcionar sus datos personales, usted acepta los términos descritos en este documento.
 
 **2\. Recogida de Datos Personales**
 

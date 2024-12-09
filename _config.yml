@@ -17,10 +17,10 @@
 # Feel free to change these! For more info, refer to:
 # ~> https://jekyllrb.com/docs/configuration/options/
 
-title:            'Fuenteovejuna Social'
-description:      'Edición y archivo participativos sobre Fuenteovejuna, de Lope de Vega'
+title:            'Todos a una'
+description:      'Edición social y archivo participativo de Fuenteovejuna'
 url:              'https://dxvidmr.github.io'
-baseurl:          '/pruebas-fo'
+baseurl:          '/todosauna'
 copyright:        'David Merino Recalde 2024'
 logo:             '/assets/logo.png'
 default_thumb:    '/assets/default.png'

@@ -7,4 +7,4 @@ Lope de Vega escribió _Fuenteovejuna_ alrededor de 1612-1614, publicándola en 
 
 ¿Quieres conocer más sobre las representaciones de _Fuenteovejuna_? ¡Explora la línea de tiempo!
 
-<iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1jjTyDDROB_Fnd9_q3W8ZOkG4SFXkxKAFhKTr6a2HUNc&font=Default&lang=en&initial_zoom=2&height=800&theme=https://cors-anywhere.herokuapp.com/https://raw.githubusercontent.com/dxvidmr/pruebas-fo/main/assets/timeline.css' width='100%' height='800' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+<iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1jjTyDDROB_Fnd9_q3W8ZOkG4SFXkxKAFhKTr6a2HUNc&font=Default&lang=en&initial_zoom=2&height=800&theme=https://cors-anywhere.herokuapp.com/https://raw.githubusercontent.com/dxvidmr/todosauna/main/assets/timeline.css' width='100%' height='800' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
