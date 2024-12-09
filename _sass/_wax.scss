@@ -871,6 +871,20 @@ button, button:focus, button:active {
   transform: translateY(0);
 }
 
+@media (max-width: 992px) {
+  .title-bento {
+    bottom: 0; 
+    transform: translateY(0); 
+    transition: none; 
+  }
+
+  .bento-box:hover .title-bento {
+    bottom: 0;
+    transform: translateY(0); 
+  }
+}
+
+
 .title-bento h3 {
   margin: 0;
   font-family: $heading-font;
@@ -897,4 +911,24 @@ button, button:focus, button:active {
 /* TIMELINE JS*/ 
 .tl-headline {
   text-transform: none !important; // Esto evita la transformación a mayúsculas
+}
+
+#aviso-pruebas {
+  color: red;
+}
+
+@media (max-width: 992px) {
+  #aviso-pruebas {
+    position: absolute;
+    margin-left: 180px;
+    font-size: 0.8rem; 
+  }
+}
+
+@media (max-width: 462px) {
+  #aviso-pruebas {
+    position: relative;
+    margin-left: 50px;
+    font-size: 0.8rem; 
+  }
 }
