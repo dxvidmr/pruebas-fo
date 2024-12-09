@@ -1,12 +1,20 @@
 ---
 layout: page
-title: Participa en el proyecto
+title: Participa
 permalink: /participa/
 ---
 
-¿Te interesa participar en el proyecto? Puedes hacerlo de distintas maneras. Si te interesa el texto dramático de _Fuenteovejuna_, puedes colaborar en la anotación de la edición social a través del proyecto en [Comunidad BNE](https://comunidad.bne.es/). Si tienes alguna experiencia personal con la obra, puedes ayudar a construir el [Archivo Social](../archivo) contándonos tu experiencia. O si conoces alguna representación o edición de _Fuenteovejuna_ que nos falte en el archivo, o tienes documentos o más datos sobre la obra, puedes sumarlos al Archivo.
+¿Te apasiona *Fuenteovejuna*? Este proyecto te invita a ser parte activa de la construcción de un lugar vivo y colaborativo dedicado a la obra. Hay varias maneras de participar según tus intereses:
 
-Este sitio está en construcción. Si envías ahora tu participación es posible que no pueda tomarse en cuenta. Contacta con [david.merino@uab.cat](mailto:david.merino@uab.cat) si te interesa participar y estar al corriente del proyecto.
+- **Marcado digital para la edición social<sup style="color: red;">NO ACTIVO</sup>:**  
+  Si disfrutas explorando el texto dramático, puedes colaborar en el marcado digital de nuestra edición social a través del proyecto en [Comunidad BNE](https://comunidad.bne.es/).
+- **Archivo de la memoria colectiva<sup style="color: red;">EN PRUEBAS</sup>:**  
+  ¿Has tenido una experiencia especial con *Fuenteovejuna*? Comparte tu testimonio y contribuye a construir el Archivo de la memoria colectiva. Cada recuerdo y vivencia nos ayuda a conocer mejor el impacto cultural y social de la obra, ya seas lector, espectador o participante de alguna puesta en escena.
+- **Contribuciones al archivo documental<sup style="color: red;">EN PRUEBAS</sup>:**  
+  Si conoces una representación, edición, traducción, o tienes fotografías, bocetos, documentos u otros materiales relacionados con *Fuenteovejuna*, envíanos esa información a través del formulario de participación. Tu colaboración permitirá ampliar y completar este archivo único.
+
+Este sitio web todavía está en construcción. Si decides enviar tu participación ahora, es posible que no podamos procesarla de inmediato. Para más información o para estar al corriente de los avances del proyecto, contacta con [david.merino@uab.cat](mailto:david.merino@uab.cat). ¡Gracias por tu interés en *Todos a una*!
+
 
 <div style="margin-bottom: 20px;"></div>
 
