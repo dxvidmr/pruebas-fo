@@ -796,6 +796,7 @@ button, button:focus, button:active {
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  overflow: hidden;
 }
 
 .row.no-negative-margins {
@@ -846,35 +847,41 @@ button, button:focus, button:active {
 
 
 .title-bento {
-  background-color: rgba($accent, 0.8);
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  background-color: rgba($accent, 0.3);
   backdrop-filter: blur(1px);
-  border-radius: 20px;
-  padding: 10px 50px;
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 0;
-    font-family: $heading-font;
-    color: $text-white;
-    font-weight: 600 !important;
-    margin-top: 1rem !important; 
-  }
-  h4 {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 0;
-    font-family: $heading-font;
-    color: $text-white;
-    text-transform: none !important;
-    font-weight: 600 !important;
-    margin-top: 0.8rem !important; 
-  }
-  @media (max-width: 504px) {
-    padding: 10px 20px;
-    h3 {
-      font-size: 1.25rem !important;
-    }
-  }
+  border-bottom-left-radius: 20px; 
+  border-bottom-right-radius: 20px; 
+  padding: 10px 30px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease-in-out, bottom 0.3s ease-in-out;
+  transform: translateY(100%);
+}
+
+.bento-box:hover .title-bento {
+  bottom: 0; 
+  transform: translateY(0);
+}
+
+.title-bento h3 {
+  margin: 0;
+  font-family: $heading-font;
+  color: $text-white;
+  font-weight: 600 !important;
+}
+
+.title-bento h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  font-family: $heading-font;
+  color: $text-white;
+  text-transform: none !important;
+  font-weight: 600 !important;
+  margin-top: 0.8rem !important; 
 }
 
 .button-right-align {
