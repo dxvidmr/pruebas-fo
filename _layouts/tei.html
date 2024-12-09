@@ -5,10 +5,25 @@ layout: page
 {{ content }}
 
 <div class="container">
-  <div id="TEI" class="texto-poema-container"></div>
+  <div class="row">
+      <!-- Columna principal para el texto TEI -->
+      <div id="TEI" class="col-lg-8 fuenteovejuna"></div>
+
+      <!-- Columna para las opciones -->
+      <div id="col-opciones" class="col-lg-4">
+        <div id="panelNotas">
+            <h4>Notas</h4>
+            <div id="noteContent">
+                <!-- Aquí se mostrará el contenido de la nota -->
+            </div>
+        </div>
+        <div>
+            <button id="toggleLines" class="fixed-button">Mostrar estrofas</button>
+        </div>
+      </div>
+  </div>
 </div>
 
-<button id="toggleLines" class="fixed-button">Mostrar/ocultar líneas</button>
 
 <div><a href="{{site.baseurl}}/assets/tei/{{page.document}}" target="_new">See original TEI.</a></div>
 
@@ -16,13 +31,10 @@ layout: page
 
 <script src="{{site.baseurl}}/assets/js/CETEI.js"></script>
 <script>
-  var CETEIcean = new CETEI()
+  var CETEIcean = new CETEI();
   CETEIcean.getHTML5("{{site.baseurl}}/assets/tei/{{page.document}}", function(data) {
-    document.getElementById("TEI").appendChild(data);
-  });
-
-  document.getElementById("toggleLines").addEventListener("click", function() {
-    var container = document.querySelector('.texto-poema-container');
-    container.classList.toggle('hide-lines');
+      document.getElementById("TEI").appendChild(data);
   });
 </script>
+<script src="{{site.baseurl}}/assets/js/tei.js"></script>
+

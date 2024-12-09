@@ -138,8 +138,13 @@ header & nav bar
   }
 
   .navbar-toggler {
-    background-color: $secondary;
-  }
+    background-color: transparent;
+    position: absolute; 
+    top: 30px;  
+    right: 30px;
+    z-index: 100000000; 
+}
+
 
   .navbar-nav {
     .nav-item {
@@ -157,17 +162,17 @@ header & nav bar
       background-color: $secondary;
     }
     .dropdown-menu {
-      background-color: darken($secondary, 2%);
+      background-color: darken($secondary, 0%); /*darken($secondary, 2%)*/
       border-color: $secondary;
       .dropdown-item {
         color: $accent;
         font-weight: 500;
       }
-      .dropdown-item:focus {
+      /*.dropdown-item:focus {
         background-color: $secondary;
-      }
+      }*/
       .dropdown-item:hover {
-        background-color: darken($secondary, 2%);
+        background-color: darken($secondary, 0%);
         color: $accent-hover;
       }
     }
@@ -523,8 +528,8 @@ content section
   @extend .container;
 
   margin: 0 auto;
-  max-width: 90%;
-  width: $max-width;
+  max-width: 100%; /* 90%*/
+  width: $total-width;
   overflow: flex-wrap;
 }
 

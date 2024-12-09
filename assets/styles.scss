@@ -13,7 +13,7 @@ $icon: url("{{ '/img/logo/isotipo_marron.svg' | absolute_url }}");
 
 $body-font:       'Nunito Sans', 'Open Sans', 'sans-serif';
 $heading-font:    'Nunito Sans', 'Open Sans', 'sans-serif';
-$logo-font:       'Yatra One', 'Nunito Sans', 'Open Sans', 'sans-serif';
+$logo-font:       'Alegreya', 'Open Sans', 'sans-serif';
 
 /* Image Size */
 
@@ -66,9 +66,12 @@ $accent-950: rgb(23, 29, 22);
 /* viewport sizes */
 
 $max-width:       1200px; /*originalmente 800px*/
+$total-width:       100%;
 
 /* margins */
 
+
+$no-margin: 0rem;
 $less-margin:     1.0rem;
 $margin:          1.5rem;
 $more-margin:     2.0rem;
@@ -83,6 +86,7 @@ $footer-height:   250px;
 font & asset import
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&font-display=auto');
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');

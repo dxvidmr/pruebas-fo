@@ -35,6 +35,9 @@ tei-standoff {
 tei-head {
   font-size: 200%;
 }
+tei-div[type="cover"] tei-head {
+  font-size: 300%;
+}
 
 tei-list {
   display: block;
@@ -100,7 +103,9 @@ tei-stage {
   margin-bottom: 1em;
 }
 
-
+tei-div[type="footnotes"] {
+  display: none;
+}
 
 tei-div[type="editor"] {
   background-color: #f2f2f2; 
@@ -132,19 +137,62 @@ tei-milestone[unit="stanza"]::after {
   margin-top: 10px;
 }
 
-.hide-lines .tei-milestone[unit="stanza"]::after {
+tei-milestone[unit="stanza"]::after {
   display: none;
+}
+
+tei-milestone[unit="stanza"].show-line::after {
+  display: block; 
 }
 
 .container {
   position: relative;
 }
 
-.fixed-button {
+/* Columna de opciones */
+#col-opciones {
   position: fixed;
-  right: 20px;
-  bottom: 20px;
-  z-index: 999; /* Asegura que el botón esté sobre otras capas */
+  top: 0;
+  right: 0;
+  height: 100vh; /* Altura completa de la ventana */
+  width: 25%; /* Ajusta el ancho según lo necesites */
+  border-left: 2px solid #ccc; /* Línea de separación a la izquierda */
+  padding: 1rem; /* Espacio interno para el contenido */
+  background-color: #f9f9f9;
+  overflow-y: auto; /* Desplazamiento vertical si el contenido es largo */
 }
 
+/* Estilo del contenido de las notas */
+#noteContent {
+  background-color: #ffffff;
+  font-size: 90%;
+  color: #333;
+  padding: 1rem;
+  border-radius: 8px;
+  min-height: 200px;
+}
 
+/* Estilos para el título del panel de notas */
+#panelNotas h4 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Estilos para el botón de alternar estrofas */
+.fixed-button {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.fixed-button:hover {
+  background-color: #0056b3;
+}
