@@ -187,7 +187,7 @@ content section
 #wax-main {
   background-color: $background;
   max-width: 100%;
-  padding-top: $no-margin;
+  padding-top: 10px;
   padding-bottom: 0; /*5 rem en origen*/
 
   h1, h2, h3, h4, h5, h5 {
@@ -794,7 +794,7 @@ button, button:focus, button:active {
 .bento-box {
   border-radius: 20px;
   padding: 50px;
-  margin-bottom: 25px;
+  margin-bottom: 0;
   height: fit-content;
   background-color: $color-100;
   display: flex;
@@ -804,39 +804,76 @@ button, button:focus, button:active {
   overflow: hidden;
 }
 
+.row {
+  margin-bottom: 30px; /* Espaciado entre los row principales */
+}
+
+.row:last-child {
+  margin-bottom: 0; /* Elimina el margen inferior en el último row */
+}
+
 .row.no-negative-margins {
-  margin-left: 0;
-  margin-right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
   margin: 0;
-  height: 700px;
+  height: auto;
 }
 
 .bento-info {
+  flex: 1 1 100%;
   min-height: 335.5px;
+  position: relative;
 
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(1.5px);
+  }
+}
+
+#bento-sabermas {
   h3 {
-    font-family: $heading-font;
+    color: $text-white;
+    position: relative;
+    text-shadow: 2px 2px 6px rgb(0, 0, 0);
+    font-weight: 600 !important;
+  }
+  &::before {
+    background-image: url(../img/bento/RTP.png);
+  }
+}
+
+#bento-participa {
+  h3 {
     color: $text;
-    font-weight: 300 !important;
+    position: relative;
+    font-weight: 600 !important;
   }
 }
 
 .bento-lectura {
   min-height: 700px;
-  background-image: url(../img/impreso.jpg);
+  background-image: url(../img/bento/impreso.jpg);
 }
 
 .bento-participa {
   min-height: 400px;
 }
 
-    #box-archivo { background-image: url(../img/archivo.jpg); }
-    #box-experiencias { background-image: url(../img/experiencias.jpg); }
-    #box-edicion { background-image: url(../img/edicion2009.jpg); }
+    #box-archivo { background-image: url(../img/bento/archivo.jpg); }
+    #box-experiencias { background-image: url(../img/bento/experiencias.jpg); }
+    #box-edicion { background-image: url(../img/bento/edicion2009.jpg); }
 
 .bento-lineadetiempo {
   min-height: 400px;
-  background-image: url(../img/lineadetiempo.jpg);
+  background-image: url(../img/bento/lineadetiempo.jpg);
 }
 
 .bento-img {
@@ -850,6 +887,21 @@ button, button:focus, button:active {
   transform: scale(1.01);
 } 
 
+/* Ajustes responsivos para pantallas pequeñas */
+@media (max-width: 992px) {
+  .row {
+    margin-bottom: 15px; 
+  }
+
+  .row.no-negative-margins {
+    gap: 15px; 
+    margin-bottom: 15px;
+  }
+
+  .bento-box {
+    margin-bottom: 0; 
+  }
+}
 
 .title-bento {
   position: absolute;
